@@ -33,18 +33,18 @@ namespace EmployeeManagementSystem
             SqlCommand sqlcomm = new SqlCommand(sqlquery, con);
             sqlcomm.Parameters.AddWithValue("@emailid", email_id.Text);
             sqlcomm.Parameters.AddWithValue("@password", password.Text);
-            sqlcomm.Parameters.AddWithValue("@isAdmin", isAdminCheckBox.Checked);
+
             SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             sqlcomm.ExecuteNonQuery();
             if (dt.Rows.Count > 0)
             {
-
+                isAdmin = (bool)dt.Rows[0]["isAdmin"];
                 con.Close();
                 MessageBox.Show("Login successful.");
                 this.Hide();
-                Search s = new Search(isAdminCheckBox.Checked);
+                Search s = new Search(isAdmin);
                 s.Show();
             }
             else

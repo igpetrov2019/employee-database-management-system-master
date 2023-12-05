@@ -30,7 +30,7 @@ namespace EmployeeManagementSystem
                 sqlCon.Open();
                 SqlCommand cmd = sqlCon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update registration set password='" + password.Text + "' where email='" + email_id.Text + "';";
+                cmd.CommandText = "update registration set password='" + password.Text + "' where emailid='" + email_id.Text + "';";
                 cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 SqlCommand cmd1 = sqlCon.CreateCommand();

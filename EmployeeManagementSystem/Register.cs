@@ -39,12 +39,13 @@ namespace EmployeeManagementSystem
                     throw new Exception("Invalid input");
                 }
                 SqlConnection con = new SqlConnection(ConnectionString);
-                string sqlquery = "insert into [employeedb].[dbo].[registration] values(@name, @emailid, @password)";
+                string sqlquery = "insert into [employeedb].[dbo].[registration] values(@name, @emailid, @password, @isAdmin)";
                 con.Open();
                 SqlCommand sqlcomm = new SqlCommand(sqlquery, con);
                 sqlcomm.Parameters.AddWithValue("@name", name.Text);
                 sqlcomm.Parameters.AddWithValue("@emailid", email_id.Text);
                 sqlcomm.Parameters.AddWithValue("@password", password.Text);
+                sqlcomm.Parameters.AddWithValue("@isAdmin", false);
                 sqlcomm.ExecuteNonQuery();
                 MessageBox.Show("Registration Successful!");
                 con.Close();

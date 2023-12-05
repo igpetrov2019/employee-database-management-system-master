@@ -32,7 +32,7 @@ namespace EmployeeManagementSystem
                 sqlCon.Open();
                 SqlCommand cmd = sqlCon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into employee values('" + emp_id_txt.Text + "','" + emp_name_txt.Text + "','" + emp_dob_txt.Text + "','" + emp_doj_txt.Text + "','" + emp_addr_txt.Text + "','" + gender_txt.Text + "','" + Convert.ToInt32(emp_mobile_txt.Text) + "','" + proffesion.Text + "','" + teacher.Text + "','" + university.Text + "','" + work.Text + "');";
+                cmd.CommandText = "insert into employee values('" + emp_id_txt.Text + "','" + emp_name_txt.Text + "','" + emp_dob_txt.Text + "','" + emp_doj_txt.Text + "','" + emp_addr_txt.Text + "','" + gender_txt.Text + "','" + emp_mobile_txt.Text + "','" + proffesion.Text + "','" + teacher.Text + "','" + university.Text + "','" + work.Text + "');";
                 cmd.ExecuteNonQuery();
                 SqlCommand cmd1 = sqlCon.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
