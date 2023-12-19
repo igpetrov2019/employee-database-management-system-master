@@ -34,22 +34,15 @@ namespace EmployeeManagementSystem
             cancel_comp_btn = new System.Windows.Forms.Button();
             emp_mobile_txt = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
-            gender_txt = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
             emp_addr_txt = new System.Windows.Forms.TextBox();
             label7 = new System.Windows.Forms.Label();
-            emp_doj_txt = new System.Windows.Forms.TextBox();
             label8 = new System.Windows.Forms.Label();
-            emp_dob_txt = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             emp_name_txt = new System.Windows.Forms.TextBox();
             label3 = new System.Windows.Forms.Label();
-            emp_id_txt = new System.Windows.Forms.TextBox();
-            label14 = new System.Windows.Forms.Label();
             clear = new System.Windows.Forms.Button();
             save_comp_btn = new System.Windows.Forms.Button();
-            label15 = new System.Windows.Forms.Label();
-            label10 = new System.Windows.Forms.Label();
             university = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
             teacher = new System.Windows.Forms.TextBox();
@@ -58,6 +51,9 @@ namespace EmployeeManagementSystem
             label11 = new System.Windows.Forms.Label();
             work = new System.Windows.Forms.TextBox();
             label12 = new System.Windows.Forms.Label();
+            gender_txt = new System.Windows.Forms.ListBox();
+            emp_dob_txt = new System.Windows.Forms.DateTimePicker();
+            emp_doj_txt = new System.Windows.Forms.DateTimePicker();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -114,15 +110,6 @@ namespace EmployeeManagementSystem
             label1.TabIndex = 60;
             label1.Text = "Телефон";
             // 
-            // gender_txt
-            // 
-            gender_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            gender_txt.Location = new System.Drawing.Point(442, 414);
-            gender_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gender_txt.Name = "gender_txt";
-            gender_txt.Size = new System.Drawing.Size(207, 34);
-            gender_txt.TabIndex = 59;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -152,15 +139,6 @@ namespace EmployeeManagementSystem
             label7.TabIndex = 56;
             label7.Text = "Адрес";
             // 
-            // emp_doj_txt
-            // 
-            emp_doj_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_doj_txt.Location = new System.Drawing.Point(442, 320);
-            emp_doj_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_doj_txt.Name = "emp_doj_txt";
-            emp_doj_txt.Size = new System.Drawing.Size(207, 34);
-            emp_doj_txt.TabIndex = 55;
-            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -170,15 +148,6 @@ namespace EmployeeManagementSystem
             label8.Size = new System.Drawing.Size(151, 28);
             label8.TabIndex = 54;
             label8.Text = "Завършил дата";
-            // 
-            // emp_dob_txt
-            // 
-            emp_dob_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_dob_txt.Location = new System.Drawing.Point(442, 274);
-            emp_dob_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_dob_txt.Name = "emp_dob_txt";
-            emp_dob_txt.Size = new System.Drawing.Size(207, 34);
-            emp_dob_txt.TabIndex = 53;
             // 
             // label4
             // 
@@ -209,25 +178,6 @@ namespace EmployeeManagementSystem
             label3.TabIndex = 50;
             label3.Text = "Име на ученик";
             // 
-            // emp_id_txt
-            // 
-            emp_id_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_id_txt.Location = new System.Drawing.Point(442, 181);
-            emp_id_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_id_txt.Name = "emp_id_txt";
-            emp_id_txt.Size = new System.Drawing.Size(207, 34);
-            emp_id_txt.TabIndex = 47;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label14.Location = new System.Drawing.Point(236, 185);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(126, 28);
-            label14.TabIndex = 46;
-            label14.Text = "Id на ученик";
-            // 
             // clear
             // 
             clear.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -236,7 +186,7 @@ namespace EmployeeManagementSystem
             clear.Name = "clear";
             clear.Size = new System.Drawing.Size(109, 45);
             clear.TabIndex = 71;
-            clear.Text = "Откажи";
+            clear.Text = "Изчисти";
             clear.UseVisualStyleBackColor = true;
             clear.Click += clear_Click;
             // 
@@ -252,24 +202,6 @@ namespace EmployeeManagementSystem
             save_comp_btn.Text = "Запис";
             save_comp_btn.UseVisualStyleBackColor = true;
             save_comp_btn.Click += save_comp_btn_Click;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new System.Drawing.Point(657, 324);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(172, 20);
-            label15.TabIndex = 72;
-            label15.Text = "(Формат: YYYY-MM-DD)";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(657, 284);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(172, 20);
-            label10.TabIndex = 73;
-            label10.Text = "(Формат: YYYY-MM-DD)";
             // 
             // university
             // 
@@ -347,12 +279,39 @@ namespace EmployeeManagementSystem
             label12.TabIndex = 80;
             label12.Text = "Работи";
             // 
+            // gender_txt
+            // 
+            gender_txt.FormattingEnabled = true;
+            gender_txt.ItemHeight = 20;
+            gender_txt.Items.AddRange(new object[] { "мъж", "жена" });
+            gender_txt.Location = new System.Drawing.Point(442, 408);
+            gender_txt.Name = "gender_txt";
+            gender_txt.Size = new System.Drawing.Size(207, 44);
+            gender_txt.TabIndex = 82;
+            // 
+            // emp_dob_txt
+            // 
+            emp_dob_txt.Location = new System.Drawing.Point(444, 280);
+            emp_dob_txt.Name = "emp_dob_txt";
+            emp_dob_txt.Size = new System.Drawing.Size(207, 27);
+            emp_dob_txt.TabIndex = 83;
+            // 
+            // emp_doj_txt
+            // 
+            emp_doj_txt.Location = new System.Drawing.Point(444, 326);
+            emp_doj_txt.Name = "emp_doj_txt";
+            emp_doj_txt.Size = new System.Drawing.Size(207, 27);
+            emp_doj_txt.TabIndex = 84;
+            // 
             // Add_Student
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             ClientSize = new System.Drawing.Size(896, 829);
+            Controls.Add(emp_doj_txt);
+            Controls.Add(emp_dob_txt);
+            Controls.Add(gender_txt);
             Controls.Add(work);
             Controls.Add(label12);
             Controls.Add(university);
@@ -361,24 +320,17 @@ namespace EmployeeManagementSystem
             Controls.Add(label9);
             Controls.Add(proffesion);
             Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label15);
             Controls.Add(clear);
             Controls.Add(save_comp_btn);
             Controls.Add(emp_mobile_txt);
             Controls.Add(label1);
-            Controls.Add(gender_txt);
             Controls.Add(label6);
             Controls.Add(emp_addr_txt);
             Controls.Add(label7);
-            Controls.Add(emp_doj_txt);
             Controls.Add(label8);
-            Controls.Add(emp_dob_txt);
             Controls.Add(label4);
             Controls.Add(emp_name_txt);
             Controls.Add(label3);
-            Controls.Add(emp_id_txt);
-            Controls.Add(label14);
             Controls.Add(panel2);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             MaximizeBox = false;
@@ -401,22 +353,15 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.Button cancel_comp_btn;
         private System.Windows.Forms.TextBox emp_mobile_txt;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox gender_txt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox emp_addr_txt;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox emp_doj_txt;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox emp_dob_txt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox emp_name_txt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox emp_id_txt;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button save_comp_btn;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox university;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox teacher;
@@ -425,5 +370,8 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox work;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ListBox gender_txt;
+        private System.Windows.Forms.DateTimePicker emp_dob_txt;
+        private System.Windows.Forms.DateTimePicker emp_doj_txt;
     }
 }
