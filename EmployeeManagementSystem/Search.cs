@@ -7,17 +7,18 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     public partial class Search : Form
     {
-        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=employeedb;Integrated Security=True";
+        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=studentsdb;Integrated Security=True";
         bool userIsAdmin = false;
         public Search(bool isAdmin)
         {
             InitializeComponent();
             add_emp_btn.Visible = isAdmin;
             userIsAdmin = isAdmin;
+            emp_btn.Visible = isAdmin;
         }
 
         private void emp_btn_Click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace EmployeeManagementSystem
         private void search_button_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConnectionString);
-            string sqlquery = "select * from [employeedb]. [dbo].[employee] where [emp_id] ='" + searchbar.Text + "  ' OR [emp_name] ='" + searchbar.Text + "' OR [emp_address] ='" + searchbar.Text + "' OR [gender] ='" + searchbar.Text + "';";
+            string sqlquery = "select * from [studentsdb]. [dbo].[student] where [student_name] ='" + searchbar.Text + "' OR [student_address] ='" + searchbar.Text + "' OR [gender] ='" + searchbar.Text + "';";
             con.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, con); SqlDataAdapter sda = new SqlDataAdapter(sqlcomm);
             DataTable dt = new DataTable();

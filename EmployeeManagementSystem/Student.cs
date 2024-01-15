@@ -7,13 +7,13 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     public partial class Student : Form
     {
-        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=employeedb;Integrated Security=True";
+        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=studentsdb;Integrated Security=True";
         SqlConnection sqlCon = new SqlConnection(ConnectionString);
-        public static string emp_id_old;
+        public static string student_id_old;
         bool userIsAdmin = false;
 
         public Student(bool isAdmin)
@@ -29,7 +29,7 @@ namespace EmployeeManagementSystem
         public void loadData()
         {
             sqlCon.Open();
-            string q = "Select e.emp_id,e.emp_name,e.emp_dob,e.emp_doj,e.emp_address,e.gender,e.emp_mobile from employee e";
+            string q = "Select e.student_id,e.student_name,e.student_in,e.student_out,e.student_address,e.gender,e.student_phone from employee e";
             SqlDataAdapter sqlDa = new SqlDataAdapter(q, sqlCon);
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
@@ -63,7 +63,7 @@ namespace EmployeeManagementSystem
                 sqlCon.Open();
                 SqlCommand cmd = sqlCon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update employee set emp_id='" + emp_id_txt.Text + "',emp_name='" + emp_name_txt.Text + "',emp_address='" + emp_addr_txt.Text + "',gender='" + gender_txt.Text + "', emp_mobile=" + Convert.ToInt32(emp_mobile_txt.Text) + " where emp_id='" + emp_id_old + "';";
+                cmd.CommandText = "update employee set student_id='" + student_id_txt.Text + "',student_name='" + student_name_txt.Text + "',student_address='" + emp_addr_txt.Text + "',gender='" + gender_txt.Text + "', student_phone=" + Convert.ToInt32(student_phone_txt.Text) + " where student_id='" + student_id_old + "';";
                 cmd.ExecuteNonQuery();
                 SqlCommand cmd1 = sqlCon.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
@@ -82,14 +82,14 @@ namespace EmployeeManagementSystem
         {
             if (e.RowIndex >= 0)
             {
-                emp_id_txt.Text = emp_grid.SelectedRows[0].Cells[0].Value.ToString();
-                emp_name_txt.Text = emp_grid.SelectedRows[0].Cells[2].Value.ToString();
-                emp_dob_txt.Text = emp_grid.SelectedRows[0].Cells[3].Value.ToString();
-                emp_doj_txt.Text = emp_grid.SelectedRows[0].Cells[4].Value.ToString();
+                student_id_txt.Text = emp_grid.SelectedRows[0].Cells[0].Value.ToString();
+                student_name_txt.Text = emp_grid.SelectedRows[0].Cells[2].Value.ToString();
+                student_in_txt.Text = emp_grid.SelectedRows[0].Cells[3].Value.ToString();
+                student_out_txt.Text = emp_grid.SelectedRows[0].Cells[4].Value.ToString();
                 emp_addr_txt.Text = emp_grid.SelectedRows[0].Cells[5].Value.ToString();
                 gender_txt.Text = emp_grid.SelectedRows[0].Cells[6].Value.ToString();
-                emp_mobile_txt.Text = emp_grid.SelectedRows[0].Cells[7].Value.ToString();
-                emp_id_old = emp_grid.SelectedRows[0].Cells[0].Value.ToString();
+                student_phone_txt.Text = emp_grid.SelectedRows[0].Cells[7].Value.ToString();
+                student_id_old = emp_grid.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
 
@@ -110,7 +110,7 @@ namespace EmployeeManagementSystem
             cmd1.ExecuteNonQuery();
             SqlCommand cmd = sqlCon.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from employee where emp_id='" + emp_id_old + "';";
+            cmd.CommandText = "delete from employee where student_id='" + student_id_old + "';";
             cmd.ExecuteNonQuery();
             sqlCon.Close();
             MessageBox.Show("Deleted Successfully.");

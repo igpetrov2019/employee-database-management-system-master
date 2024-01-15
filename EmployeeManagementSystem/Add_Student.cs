@@ -7,11 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     public partial class Add_Student : Form
     {
-        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=employeedb;Integrated Security=True";
+        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=studentsdb;Integrated Security=True";
         SqlConnection sqlCon = new SqlConnection(ConnectionString);
         public Add_Student()
         {
@@ -21,8 +21,8 @@ namespace EmployeeManagementSystem
         private void cancel_comp_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Student emp = new Student(true);
-            emp.Show();
+            Student student = new Student(true);
+            student.Show();
         }
 
         private void save_comp_btn_Click(object sender, EventArgs e)
@@ -32,34 +32,34 @@ namespace EmployeeManagementSystem
                 sqlCon.Open();
                 SqlCommand cmd = sqlCon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into employee values('" + emp_name_txt.Text + "','" + emp_dob_txt.Text + "','" + emp_doj_txt.Text + "','" + emp_addr_txt.Text + "','" + gender_txt.Text + "','" + emp_mobile_txt.Text + "','" + proffesion.Text + "','" + teacher.Text + "','" + work.Text + "','" + university.Text + "');";
+                cmd.CommandText = "insert into student values('" + student_name_txt.Text + "','" + student_in_txt.Text + "','" + student_out_txt.Text + "','" + emp_addr_txt.Text + "','" + gender_txt.Text + "','" + student_phone_txt.Text + "','" + proffesion.Text + "','" + teacher.Text + "','" + work.Text + "','" + university.Text + "');";
                 cmd.ExecuteNonQuery();
                 sqlCon.Close();
-                MessageBox.Show("Data Added Successfully.");
+                MessageBox.Show("Данните са записани успешно.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Sorry!Couldn't insert data.");
+                MessageBox.Show("Грешка! Неуспешно записване на данни!");
                 this.Hide();
-                Student emp = new Student(true);
-                emp.Show();
+                Student student = new Student(true);
+                student.Show();
             }
         }
 
         private void clear_Click(object sender, EventArgs e)
         {
-            emp_name_txt.Text = "";
-            emp_dob_txt.Text = "";
-            emp_doj_txt.Text = "";
+            student_name_txt.Text = "";
+            student_in_txt.Text = "";
+            student_out_txt.Text = "";
             emp_addr_txt.Text = "";
             gender_txt.Text = "";
-            emp_mobile_txt.Text = "";
+            student_phone_txt.Text = "";
             work.Text = "";
             university.Text = "";
             teacher.Text = "";
         }
 
-        private void Add_Employee_FormClosing(object sender, FormClosingEventArgs e)
+        private void Add_Student_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

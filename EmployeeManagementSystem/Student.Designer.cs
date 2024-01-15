@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     partial class Student
     {
@@ -37,20 +37,20 @@ namespace EmployeeManagementSystem
             search_btn = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
             label12 = new System.Windows.Forms.Label();
-            emp_mobile_txt = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
+            student_phone_txt = new System.Windows.Forms.TextBox();
+            studentPhoneLabel = new System.Windows.Forms.Label();
             gender_txt = new System.Windows.Forms.TextBox();
-            label6 = new System.Windows.Forms.Label();
+            studentGenderLabel = new System.Windows.Forms.Label();
             emp_addr_txt = new System.Windows.Forms.TextBox();
-            label7 = new System.Windows.Forms.Label();
-            emp_doj_txt = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            emp_dob_txt = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
-            emp_name_txt = new System.Windows.Forms.TextBox();
-            label3 = new System.Windows.Forms.Label();
-            emp_id_txt = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
+            studentAddressLabel = new System.Windows.Forms.Label();
+            student_out_txt = new System.Windows.Forms.TextBox();
+            studentOutLabel = new System.Windows.Forms.Label();
+            student_in_txt = new System.Windows.Forms.TextBox();
+            studentInLabel = new System.Windows.Forms.Label();
+            student_name_txt = new System.Windows.Forms.TextBox();
+            studentNameLabel = new System.Windows.Forms.Label();
+            student_id_txt = new System.Windows.Forms.TextBox();
+            nimberLabel = new System.Windows.Forms.Label();
             mod_emp_btn = new System.Windows.Forms.Button();
             del_emp_btn = new System.Windows.Forms.Button();
             emp_grid = new System.Windows.Forms.DataGridView();
@@ -129,20 +129,20 @@ namespace EmployeeManagementSystem
             // 
             panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             panel3.Controls.Add(label12);
-            panel3.Controls.Add(emp_mobile_txt);
-            panel3.Controls.Add(label5);
+            panel3.Controls.Add(student_phone_txt);
+            panel3.Controls.Add(studentPhoneLabel);
             panel3.Controls.Add(gender_txt);
-            panel3.Controls.Add(label6);
+            panel3.Controls.Add(studentGenderLabel);
             panel3.Controls.Add(emp_addr_txt);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(emp_doj_txt);
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(emp_dob_txt);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(emp_name_txt);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(emp_id_txt);
-            panel3.Controls.Add(label1);
+            panel3.Controls.Add(studentAddressLabel);
+            panel3.Controls.Add(student_out_txt);
+            panel3.Controls.Add(studentOutLabel);
+            panel3.Controls.Add(student_in_txt);
+            panel3.Controls.Add(studentInLabel);
+            panel3.Controls.Add(student_name_txt);
+            panel3.Controls.Add(studentNameLabel);
+            panel3.Controls.Add(student_id_txt);
+            panel3.Controls.Add(nimberLabel);
             panel3.Controls.Add(mod_emp_btn);
             panel3.Controls.Add(del_emp_btn);
             panel3.Controls.Add(emp_grid);
@@ -162,24 +162,24 @@ namespace EmployeeManagementSystem
             label12.Size = new System.Drawing.Size(0, 28);
             label12.TabIndex = 40;
             // 
-            // emp_mobile_txt
+            // student_phone_txt
             // 
-            emp_mobile_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_mobile_txt.Location = new System.Drawing.Point(753, 383);
-            emp_mobile_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_mobile_txt.Name = "emp_mobile_txt";
-            emp_mobile_txt.Size = new System.Drawing.Size(207, 34);
-            emp_mobile_txt.TabIndex = 35;
+            student_phone_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            student_phone_txt.Location = new System.Drawing.Point(753, 383);
+            student_phone_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            student_phone_txt.Name = "student_phone_txt";
+            student_phone_txt.Size = new System.Drawing.Size(207, 34);
+            student_phone_txt.TabIndex = 35;
             // 
-            // label5
+            // studentPhoneLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(582, 387);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(91, 28);
-            label5.TabIndex = 34;
-            label5.Text = "Телефон";
+            studentPhoneLabel.AutoSize = true;
+            studentPhoneLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            studentPhoneLabel.Location = new System.Drawing.Point(582, 387);
+            studentPhoneLabel.Name = "studentPhoneLabel";
+            studentPhoneLabel.Size = new System.Drawing.Size(91, 28);
+            studentPhoneLabel.TabIndex = 34;
+            studentPhoneLabel.Text = "Телефон";
             // 
             // gender_txt
             // 
@@ -190,15 +190,15 @@ namespace EmployeeManagementSystem
             gender_txt.Size = new System.Drawing.Size(207, 34);
             gender_txt.TabIndex = 33;
             // 
-            // label6
+            // studentGenderLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(582, 340);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(49, 28);
-            label6.TabIndex = 32;
-            label6.Text = "Пол";
+            studentGenderLabel.AutoSize = true;
+            studentGenderLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            studentGenderLabel.Location = new System.Drawing.Point(582, 340);
+            studentGenderLabel.Name = "studentGenderLabel";
+            studentGenderLabel.Size = new System.Drawing.Size(49, 28);
+            studentGenderLabel.TabIndex = 32;
+            studentGenderLabel.Text = "Пол";
             // 
             // emp_addr_txt
             // 
@@ -209,95 +209,95 @@ namespace EmployeeManagementSystem
             emp_addr_txt.Size = new System.Drawing.Size(207, 34);
             emp_addr_txt.TabIndex = 31;
             // 
-            // label7
+            // studentAddressLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(582, 293);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(164, 28);
-            label7.TabIndex = 30;
-            label7.Text = "Адрес на ученик";
+            studentAddressLabel.AutoSize = true;
+            studentAddressLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            studentAddressLabel.Location = new System.Drawing.Point(582, 293);
+            studentAddressLabel.Name = "studentAddressLabel";
+            studentAddressLabel.Size = new System.Drawing.Size(164, 28);
+            studentAddressLabel.TabIndex = 30;
+            studentAddressLabel.Text = "Адрес на ученик";
             // 
-            // emp_doj_txt
+            // student_out_txt
             // 
-            emp_doj_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_doj_txt.Location = new System.Drawing.Point(753, 243);
-            emp_doj_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_doj_txt.MaxLength = 10;
-            emp_doj_txt.Name = "emp_doj_txt";
-            emp_doj_txt.ReadOnly = true;
-            emp_doj_txt.Size = new System.Drawing.Size(207, 34);
-            emp_doj_txt.TabIndex = 29;
+            student_out_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            student_out_txt.Location = new System.Drawing.Point(753, 243);
+            student_out_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            student_out_txt.MaxLength = 10;
+            student_out_txt.Name = "student_out_txt";
+            student_out_txt.ReadOnly = true;
+            student_out_txt.Size = new System.Drawing.Size(207, 34);
+            student_out_txt.TabIndex = 29;
             // 
-            // label8
+            // studentOutLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(582, 247);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(151, 28);
-            label8.TabIndex = 28;
-            label8.Text = "Завършил дата";
+            studentOutLabel.AutoSize = true;
+            studentOutLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            studentOutLabel.Location = new System.Drawing.Point(582, 247);
+            studentOutLabel.Name = "studentOutLabel";
+            studentOutLabel.Size = new System.Drawing.Size(151, 28);
+            studentOutLabel.TabIndex = 28;
+            studentOutLabel.Text = "Завършил дата";
             // 
-            // emp_dob_txt
+            // student_in_txt
             // 
-            emp_dob_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_dob_txt.Location = new System.Drawing.Point(753, 196);
-            emp_dob_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_dob_txt.MaxLength = 10;
-            emp_dob_txt.Name = "emp_dob_txt";
-            emp_dob_txt.ReadOnly = true;
-            emp_dob_txt.Size = new System.Drawing.Size(207, 34);
-            emp_dob_txt.TabIndex = 27;
+            student_in_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            student_in_txt.Location = new System.Drawing.Point(753, 196);
+            student_in_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            student_in_txt.MaxLength = 10;
+            student_in_txt.Name = "student_in_txt";
+            student_in_txt.ReadOnly = true;
+            student_in_txt.Size = new System.Drawing.Size(207, 34);
+            student_in_txt.TabIndex = 27;
             // 
-            // label4
+            // studentInLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(582, 200);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(112, 28);
-            label4.TabIndex = 26;
-            label4.Text = "Приет дата";
+            studentInLabel.AutoSize = true;
+            studentInLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            studentInLabel.Location = new System.Drawing.Point(582, 200);
+            studentInLabel.Name = "studentInLabel";
+            studentInLabel.Size = new System.Drawing.Size(112, 28);
+            studentInLabel.TabIndex = 26;
+            studentInLabel.Text = "Приет дата";
             // 
-            // emp_name_txt
+            // student_name_txt
             // 
-            emp_name_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_name_txt.Location = new System.Drawing.Point(753, 148);
-            emp_name_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_name_txt.Name = "emp_name_txt";
-            emp_name_txt.Size = new System.Drawing.Size(207, 34);
-            emp_name_txt.TabIndex = 25;
+            student_name_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            student_name_txt.Location = new System.Drawing.Point(753, 148);
+            student_name_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            student_name_txt.Name = "student_name_txt";
+            student_name_txt.Size = new System.Drawing.Size(207, 34);
+            student_name_txt.TabIndex = 25;
             // 
-            // label3
+            // studentNameLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(582, 152);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(152, 28);
-            label3.TabIndex = 24;
-            label3.Text = "Име на ученик:";
+            studentNameLabel.AutoSize = true;
+            studentNameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            studentNameLabel.Location = new System.Drawing.Point(582, 152);
+            studentNameLabel.Name = "studentNameLabel";
+            studentNameLabel.Size = new System.Drawing.Size(152, 28);
+            studentNameLabel.TabIndex = 24;
+            studentNameLabel.Text = "Име на ученик:";
             // 
-            // emp_id_txt
+            // student_id_txt
             // 
-            emp_id_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            emp_id_txt.Location = new System.Drawing.Point(753, 102);
-            emp_id_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            emp_id_txt.Name = "emp_id_txt";
-            emp_id_txt.Size = new System.Drawing.Size(207, 34);
-            emp_id_txt.TabIndex = 21;
+            student_id_txt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            student_id_txt.Location = new System.Drawing.Point(753, 102);
+            student_id_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            student_id_txt.Name = "student_id_txt";
+            student_id_txt.Size = new System.Drawing.Size(207, 34);
+            student_id_txt.TabIndex = 21;
             // 
-            // label1
+            // nimberLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(582, 106);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(83, 28);
-            label1.TabIndex = 20;
-            label1.Text = "Номер: ";
+            nimberLabel.AutoSize = true;
+            nimberLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            nimberLabel.Location = new System.Drawing.Point(582, 106);
+            nimberLabel.Name = "nimberLabel";
+            nimberLabel.Size = new System.Drawing.Size(83, 28);
+            nimberLabel.TabIndex = 20;
+            nimberLabel.Text = "Номер: ";
             // 
             // mod_emp_btn
             // 
@@ -385,7 +385,7 @@ namespace EmployeeManagementSystem
             MinimizeBox = false;
             Name = "Student";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Employee Database Management System";
+            Text = "Deluxe Notebook";
             FormClosing += Employee_FormClosing;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -409,20 +409,20 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button mod_emp_btn;
         private System.Windows.Forms.Button del_emp_btn;
-        private System.Windows.Forms.TextBox emp_mobile_txt;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox student_phone_txt;
+        private System.Windows.Forms.Label studentPhoneLabel;
         private System.Windows.Forms.TextBox gender_txt;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label studentGenderLabel;
         private System.Windows.Forms.TextBox emp_addr_txt;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox emp_doj_txt;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox emp_dob_txt;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox emp_name_txt;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox emp_id_txt;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label studentAddressLabel;
+        private System.Windows.Forms.TextBox student_out_txt;
+        private System.Windows.Forms.Label studentOutLabel;
+        private System.Windows.Forms.TextBox student_in_txt;
+        private System.Windows.Forms.Label studentInLabel;
+        private System.Windows.Forms.TextBox student_name_txt;
+        private System.Windows.Forms.Label studentNameLabel;
+        private System.Windows.Forms.TextBox student_id_txt;
+        private System.Windows.Forms.Label nimberLabel;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;

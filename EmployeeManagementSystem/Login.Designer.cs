@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     partial class Login
     {
@@ -31,7 +31,7 @@ namespace EmployeeManagementSystem
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            label1 = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             email_id = new System.Windows.Forms.TextBox();
             password = new System.Windows.Forms.TextBox();
@@ -39,7 +39,7 @@ namespace EmployeeManagementSystem
             linkLabel1 = new System.Windows.Forms.LinkLabel();
             label4 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
-            label5 = new System.Windows.Forms.Label();
+            forgotPasswordLabel = new System.Windows.Forms.Label();
             linkLabel2 = new System.Windows.Forms.LinkLabel();
             isAdminCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -57,15 +57,15 @@ namespace EmployeeManagementSystem
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // label1
+            // emailLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(249, 297);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(83, 28);
-            label1.TabIndex = 9;
-            label1.Text = "Имейл :";
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            emailLabel.Location = new System.Drawing.Point(249, 297);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(83, 28);
+            emailLabel.TabIndex = 9;
+            emailLabel.Text = "Имейл :";
             // 
             // label2
             // 
@@ -137,14 +137,14 @@ namespace EmployeeManagementSystem
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // label5
+            // forgotPasswordLabel
             // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(314, 415);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(205, 20);
-            label5.TabIndex = 17;
-            label5.Text = "Забравена парола? Кликни ";
+            forgotPasswordLabel.AutoSize = true;
+            forgotPasswordLabel.Location = new System.Drawing.Point(314, 415);
+            forgotPasswordLabel.Name = "forgotPasswordLabel";
+            forgotPasswordLabel.Size = new System.Drawing.Size(205, 20);
+            forgotPasswordLabel.TabIndex = 17;
+            forgotPasswordLabel.Text = "Забравена парола? Кликни ";
             // 
             // linkLabel2
             // 
@@ -175,7 +175,7 @@ namespace EmployeeManagementSystem
             ClientSize = new System.Drawing.Size(896, 615);
             Controls.Add(isAdminCheckBox);
             Controls.Add(linkLabel2);
-            Controls.Add(label5);
+            Controls.Add(forgotPasswordLabel);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(linkLabel1);
@@ -183,14 +183,14 @@ namespace EmployeeManagementSystem
             Controls.Add(password);
             Controls.Add(email_id);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(emailLabel);
             Controls.Add(pictureBox1);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Login";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Employee Database Management System";
+            Text = "Deluxe Notebook";
             FormClosing += Login_FormClosing;
             Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -201,7 +201,7 @@ namespace EmployeeManagementSystem
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox email_id;
         private System.Windows.Forms.TextBox password;
@@ -209,7 +209,7 @@ namespace EmployeeManagementSystem
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label forgotPasswordLabel;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.CheckBox isAdminCheckBox;
     }

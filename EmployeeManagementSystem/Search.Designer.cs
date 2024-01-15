@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     partial class Search
     {
@@ -210,7 +210,7 @@ namespace EmployeeManagementSystem
             MinimizeBox = false;
             Name = "Search";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Employee Database Management System";
+            Text = "Deluxe Notebook";
             FormClosing += Search_FormClosing;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

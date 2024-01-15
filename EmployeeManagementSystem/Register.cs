@@ -7,11 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     public partial class Register : Form
     {
-        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=employeedb;Integrated Security=True";
+        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=studentsdb;Integrated Security=True";
 
         public Register()
         {
@@ -34,20 +34,20 @@ namespace EmployeeManagementSystem
         {
             try
             {
-                if (name.Text == "" || email_id.Text == "" || password.Text == "")
+                if (name.Text == "" || email.Text == "" || password.Text == "")
                 {
                     throw new Exception("Invalid input");
                 }
                 SqlConnection con = new SqlConnection(ConnectionString);
-                string sqlquery = "insert into [employeedb].[dbo].[registration] values(@name, @emailid, @password, @isAdmin)";
+                string sqlquery = "insert into [studentsdb].[dbo].[registration] values(@name, @emailid, @password, @isAdmin)";
                 con.Open();
                 SqlCommand sqlcomm = new SqlCommand(sqlquery, con);
                 sqlcomm.Parameters.AddWithValue("@name", name.Text);
-                sqlcomm.Parameters.AddWithValue("@emailid", email_id.Text);
+                sqlcomm.Parameters.AddWithValue("@emailid", email.Text);
                 sqlcomm.Parameters.AddWithValue("@password", password.Text);
                 sqlcomm.Parameters.AddWithValue("@isAdmin", false);
                 sqlcomm.ExecuteNonQuery();
-                MessageBox.Show("Registration Successful!");
+                MessageBox.Show("Успешна регистрация!");
                 con.Close();
                 this.Hide();
                 Login l = new Login();
@@ -55,7 +55,7 @@ namespace EmployeeManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Couldn't register");
+                MessageBox.Show("Невъзможна регистрация");
             }
         }
 
@@ -64,7 +64,7 @@ namespace EmployeeManagementSystem
             if (char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
-                DialogResult dia = MessageBox.Show("only characters are allowed");
+                DialogResult dia = MessageBox.Show("позволени са само букви и цифри");
             }
         }
 
@@ -78,7 +78,7 @@ namespace EmployeeManagementSystem
             if (char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = true;
-                DialogResult dia = MessageBox.Show("only characters are allowed");
+                DialogResult dia = MessageBox.Show("позволени са само букви и цифри");
             }
         }
 

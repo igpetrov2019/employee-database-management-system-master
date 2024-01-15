@@ -7,11 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     public partial class Login : Form
     {
-        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=employeedb;Integrated Security=True";
+        public static string ConnectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=studentsdb;Integrated Security=True";
         bool isAdmin = false;
         public Login()
         {
@@ -28,7 +28,7 @@ namespace EmployeeManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConnectionString);
-            string sqlquery = "select * from [employeedb]. [dbo].[registration] where emailid = @emailid and password = @password";
+            string sqlquery = "select * from [studentsdb]. [dbo].[registration] where emailid = @emailid and password = @password";
             con.Open();
             SqlCommand sqlcomm = new SqlCommand(sqlquery, con);
             sqlcomm.Parameters.AddWithValue("@emailid", email_id.Text);
@@ -42,14 +42,14 @@ namespace EmployeeManagementSystem
             {
                 isAdmin = (bool)dt.Rows[0]["isAdmin"];
                 con.Close();
-                MessageBox.Show("Login successful.");
+                MessageBox.Show("Успешно вписване.");
                 this.Hide();
                 Search s = new Search(isAdmin);
                 s.Show();
             }
             else
             {
-                MessageBox.Show("Inavlid email or password");
+                MessageBox.Show("Невалиден имейл или парола");
                 email_id.Text = "";
                 password.Text = "";
                 con.Close();

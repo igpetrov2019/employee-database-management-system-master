@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeeManagementSystem
+namespace DeluxeNotebook
 {
     partial class Register
     {
@@ -32,11 +32,11 @@ namespace EmployeeManagementSystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             register_btn = new System.Windows.Forms.Button();
             password = new System.Windows.Forms.TextBox();
-            email_id = new System.Windows.Forms.TextBox();
-            label2 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
+            email = new System.Windows.Forms.TextBox();
+            passwordLabel = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            label3 = new System.Windows.Forms.Label();
+            nameLabel = new System.Windows.Forms.Label();
             name = new System.Windows.Forms.TextBox();
             label4 = new System.Windows.Forms.Label();
             linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -68,35 +68,35 @@ namespace EmployeeManagementSystem
             password.TextChanged += password_TextChanged;
             password.KeyPress += password_KeyPress;
             // 
-            // email_id
+            // email
             // 
-            email_id.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            email_id.Location = new System.Drawing.Point(342, 341);
-            email_id.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            email_id.Name = "email_id";
-            email_id.Size = new System.Drawing.Size(271, 34);
-            email_id.TabIndex = 20;
-            email_id.KeyPress += email_id_KeyPress;
+            email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            email.Location = new System.Drawing.Point(342, 341);
+            email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            email.Name = "email";
+            email.Size = new System.Drawing.Size(271, 34);
+            email.TabIndex = 20;
+            email.KeyPress += email_id_KeyPress;
             // 
-            // label2
+            // passwordLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(243, 405);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(90, 28);
-            label2.TabIndex = 19;
-            label2.Text = "Парола :";
+            passwordLabel.AutoSize = true;
+            passwordLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            passwordLabel.Location = new System.Drawing.Point(243, 405);
+            passwordLabel.Name = "passwordLabel";
+            passwordLabel.Size = new System.Drawing.Size(90, 28);
+            passwordLabel.TabIndex = 19;
+            passwordLabel.Text = "Парола :";
             // 
-            // label1
+            // emailLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(243, 345);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(83, 28);
-            label1.TabIndex = 18;
-            label1.Text = "Имейл :";
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            emailLabel.Location = new System.Drawing.Point(243, 345);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(83, 28);
+            emailLabel.TabIndex = 18;
+            emailLabel.Text = "Имейл :";
             // 
             // pictureBox1
             // 
@@ -110,15 +110,15 @@ namespace EmployeeManagementSystem
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // label3
+            // nameLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(243, 285);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(60, 28);
-            label3.TabIndex = 23;
-            label3.Text = "Име :";
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            nameLabel.Location = new System.Drawing.Point(243, 285);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(60, 28);
+            nameLabel.TabIndex = 23;
+            nameLabel.Text = "Име :";
             // 
             // name
             // 
@@ -168,19 +168,19 @@ namespace EmployeeManagementSystem
             Controls.Add(linkLabel1);
             Controls.Add(label5);
             Controls.Add(name);
-            Controls.Add(label3);
+            Controls.Add(nameLabel);
             Controls.Add(register_btn);
             Controls.Add(password);
-            Controls.Add(email_id);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(email);
+            Controls.Add(passwordLabel);
+            Controls.Add(emailLabel);
             Controls.Add(pictureBox1);
             Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Register";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            Text = "Employee Database Management System";
+            Text = "Deluxe Notebook";
             FormClosing += Register_FormClosing;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -191,11 +191,11 @@ namespace EmployeeManagementSystem
 
         private System.Windows.Forms.Button register_btn;
         private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.TextBox email_id;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
