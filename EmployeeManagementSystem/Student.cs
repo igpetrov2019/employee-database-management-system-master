@@ -29,7 +29,7 @@ namespace DeluxeNotebook
         public void loadData()
         {
             sqlCon.Open();
-            string q = "Select e.student_id,e.student_name,e.student_in,e.student_out,e.student_address,e.gender,e.student_phone from employee e";
+            string q = "Select e.student_id,e.student_name,e.student_in,e.student_out,e.student_address,e.gender,e.student_phone from student e";
             SqlDataAdapter sqlDa = new SqlDataAdapter(q, sqlCon);
             DataTable dtbl = new DataTable();
             sqlDa.Fill(dtbl);
